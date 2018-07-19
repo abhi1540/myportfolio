@@ -1,0 +1,33 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="{% url 'blog:home' %}">ABHISEK GANTAIT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'blog:home' %}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About Me</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Tutorials
+      </a>
+      <div class="dropdown-menu">
+          {% for cat in links %}
+              <!--<a class="dropdown-item" href="{{ cat.get_url }}">{{cat.tag}}</a>-->
+           <a class="dropdown-item" href="{% url 'blog:categories' cat.tag %}">{{cat.tag}}</a>
+          {% endfor %}
+      </div>
+    </li>
+  </ul>
+
+      </div>
+</nav>

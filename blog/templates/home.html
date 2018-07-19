@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <main role="main">
+
+      <section class="jumbotron text-center">
+
+            <!--<img src="{% static 'portfolio_background.jpg' %}" width="400" height="300">-->
+
+          <h1>
+              Never stop fighting until you arrive at your destined place - that is,
+              the unique you. Have an aim in life, continuously acquire knowledge, work hard, and
+              have perseverance to realise the great life.
+              <br />
+                   - Dr. A. P. J. Abdul Kalam
+
+          </h1>
+
+      </section>
+
+
+        <div class="container">
+          <div class="row">
+             {% for cat in object_list %}
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow ">
+                <img class="card-img-top" src="{{cat.image.url}}" width="250" height="200">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center">
+                      <a href="{% url 'blog:detail' cat.tag cat.slug %}"><h3>{{ cat.title }}</h3></a>
+                  </div>
+                  <h5>{{ cat.created }}</h5><h5>Tag: {{ cat.tag }}</h5>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          </div>
+        </div>
+
+
+
+
+    </main>
+
+
+
+{% endblock %}
