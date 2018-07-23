@@ -3,35 +3,15 @@
 {% block content %}
 <main role="main" xmlns="http://www.w3.org/1999/html">
 
-      <section class="jumbotron text-center">
-
-
-
-            <!--<img src="{% static 'portfolio_background.jpg' %}" width="400" height="300">-->
-
-          <h1>
-              Never stop fighting until you arrive at your destined place - that is,
-              the unique you. Have an aim in life, continuously acquire knowledge, work hard, and
-              have perseverance to realise the great life.
-              <br />
-                   - Dr. A. P. J. Abdul Kalam
-
-          </h1>
-
-
-      </section>
-
 
         <div class="container">
                   <div>
                     <a href="{% url 'blog:detail' object_list.tag object_list.slug %}"><h3>{{ object_list.title }}</h3></a>
                   </div>
-                  <h5>{{ object_list.description }}</h5>
 
-    </div>
+                  {{ object_list.description | safe}}
 
-
-
+        </div>
 
 
     </main>

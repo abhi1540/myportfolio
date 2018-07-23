@@ -1,21 +1,37 @@
 from django.shortcuts import render, get_object_or_404, redirect, Http404
 from .models import Category
 from django.views.generic import ListView, DetailView
-
+from django.core.paginator import Paginator
+from django.core.paginator import EmptyPage
+from django.core.paginator import PageNotAnInteger
 
 # Create your views here.
 
 
-# def home_page(request):
-#     return render(request, "home.html", {})
+def about_me(request):
+    return render(request, "aboutme.html", {})
 
 
 class AllBlog(ListView):
     queryset = Category.objects.all()
     template_name = "home.html"
+    paginate_by = 3
 
     def get_context_data(self, *args, **kwargs):
         context = super(AllBlog, self).get_context_data(*args, **kwargs)
+
+        paginator = Paginator(self.queryset, self.paginate_by)
+
+        page = self.request.GET.get('page')
+
+        try:
+            queryset = paginator.page(page)
+        except PageNotAnInteger:
+            queryset = paginator.page(1)
+        except EmptyPage:
+            queryset = paginator.page(paginator.num_pages)
+
+        context['queryset'] = queryset
         return context
 
 
@@ -53,30 +69,6 @@ class TagDetailView(ListView):
     #         queryset = Category.objects.all()
     #     return queryset
 
-
-# class SlugDetailView(ListView):
-#     model = Category
-#     template_name = 'detailview.html'
-#
-#
-#     def get_context_data(self, pk=id, slug=None, **kwargs):
-#         products_list = None
-#         # id = Category.objects.get(pk=id)
-#         # slug = Category.objects.get(slug=slug)
-#         context = super(SlugDetailView, self).get_context_data(**kwargs)
-#         if slug is not None and id:
-#             products_list = Category.objects.filter(slug=slug, pk=id)
-#         else:
-#             products_list = Category.objects.all()
-#         print(id, slug)
-#         context.update(({'object_list': products_list}))
-#
-#         return context
-
-# def SlugDetailView(request, slug, tag):
-#     product = get_object_or_404(Category, tag=tag, slug=slug)
-#     return render(request, 'detailview.html',  {'product': product})
-#
 
 class SlugDetailView(ListView):
     queryset = Category.objects.all()

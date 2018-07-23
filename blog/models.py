@@ -50,3 +50,5 @@ def product_pre_save_receiver(sender, instance, *args, **kwargs):
 
 
 pre_save.connect(product_pre_save_receiver, sender=Category)
+
+

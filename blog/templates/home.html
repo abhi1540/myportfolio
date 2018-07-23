@@ -36,10 +36,17 @@
             {% endfor %}
           </div>
           </div>
-        </div>
 
-
-
+<div class="mx-auto">
+			{% if queryset.paginator.num_pages > 1 %}
+				<hr>
+				<div class="text-center">
+					{% for pg in queryset.paginator.page_range %}
+						<a href="?page={{pg}}" class="btn btn-light btn-sm {% if queryset.number == pg %}active{% endif %}">{{pg}}</a>
+					{% endfor %}
+				</div>
+			{% endif %}
+		</div>
 
     </main>
 
