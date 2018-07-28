@@ -29,7 +29,8 @@
                   <div class="d-flex justify-content-between align-items-center">
                       <a href="{% url 'blog:detail' cat.tag cat.slug %}"><h3>{{ cat.title }}</h3></a>
                   </div>
-                  <h5>{{ cat.created }}</h5><h5>Tag: {{ cat.tag }}</h5>
+                  <h5>Created Date: {{ cat.created }}</h5>
+                    <h5>Tag: <a href="{% url 'blog:categories' cat.tag %}">{{ cat.tag }}</a></h5>
                 </div>
               </div>
             </div>
