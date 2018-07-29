@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="795e8427-1dfa-428a-a167-91d337bf4255" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/myblog/settings.py" afterPath="$PROJECT_DIR$/myblog/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,17 +50,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myblog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="85" column="23" lean-forward="true" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
+            <state relative-caret-position="458">
+              <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -147,7 +146,6 @@
         <option value="$PROJECT_DIR$/myblog/urls.py" />
         <option value="$PROJECT_DIR$/staticfiles/admin/css/bootstrap" />
         <option value="$PROJECT_DIR$/blog/forms.py" />
-        <option value="$PROJECT_DIR$/myblog/settings.py" />
         <option value="$PROJECT_DIR$/blog/context_processor.py" />
         <option value="$PROJECT_DIR$/blog/views.py" />
         <option value="$PROJECT_DIR$/blog/urls.py" />
@@ -160,6 +158,7 @@
         <option value="$PROJECT_DIR$/blog/templates/header.html" />
         <option value="$PROJECT_DIR$/blog/templates/aboutme.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/myblog/settings.py" />
       </list>
     </option>
   </component>
@@ -623,18 +622,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myblog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="85" column="23" lean-forward="true" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="139" column="0" lean-forward="true" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding />
         </state>
       </provider>
