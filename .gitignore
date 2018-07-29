@@ -9,5 +9,3 @@ local_settings.py
 /media
 /static
 /staticfiles
-manage.py
-myblog/settings.py
