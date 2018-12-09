@@ -5,10 +5,9 @@
 
 
         <div class="container">
-                  <div>
-                    <a href="{% url 'blog:detail' object_list.tag object_list.slug %}"><h3>{{ object_list.title }}</h3></a>
-                  </div>
-
+                  <!--<div>-->
+                    <!--<a href="{% url 'blog:detail' object_list.tag object_list.slug %}"><h3>{{ object_list.title }}</h3></a>-->
+                  <!--</div>-->
                   {{ object_list.description | safe}}
 
         </div>
