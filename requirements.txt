@@ -1,6 +1,6 @@
 certifi==2018.4.16
 chardet==3.0.4
-Django==2.0.8
+Django==2.2.10
 django-crispy-forms==1.7.2
 djangorestframework==3.9.1
 gunicorn==19.9.0
